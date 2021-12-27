@@ -7,10 +7,16 @@ function findOdd(arr) {
     
     console.log("arr:", arr);
 
+    // Create a Key:Value pair to track how many times each number appears in the list
     for (let idx=0; idx < arr.length; idx++) {
         let num = arr[idx];
-        console.log(num);
-        arrDict[num.toString()] = 1;
+        
+        if (!(num in arrDict)) {
+            arrDict[num] = 1;
+        } else {
+            arrDict[num] = arrDict[num] + 1;
+        }
+
     }
     console.log("arDict:", arrDict);
     return 0;
