@@ -8,9 +8,11 @@ function findOdd(arr) {
     console.log("arr:", arr);
 
     for (let idx=0; idx < arr.length; idx++) {
-        console.log(idx);
+        let num = arr[idx];
+        console.log(num);
+        arrDict[num.toString()] = 1;
     }
-
+    console.log("arDict:", arrDict);
     return 0;
   }
 
