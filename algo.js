@@ -19,7 +19,16 @@ function findOdd(arr) {
 
     }
     console.log("arDict:", arrDict);
+
+    for (const [key, value] of Object.entries(arrDict)) {
+        if (value % 2 === 1) {
+            return parseInt(key);
+        }
+    }
+
     return 0;
   }
 
-findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]);
+
+console.log("findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])", findOdd([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]));
+console.log("findOdd([1,1,2,-2,5,2,4,4,-1,-2,5])", findOdd([1,1,2,-2,5,2,4,4,-1,-2,5]));
